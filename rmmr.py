@@ -357,12 +357,9 @@ def run_tab1(df_rm):
 
     df_rm = df_rm.query("QA_STATUS in @status and ITEM_DESCRIPTION == @material").copy()
 
-    path = (
-        r"L:\Projects\Raw_Materials_Management_Review_Initiative"
-        + r"\General\Mgmt Review Log Message Key.xlsx"
-    )
+    path = "https://raw.githubusercontent.com/bradsby/RMMR/main/Mgmt%20Review%20Log%20Message%20Key.csv"
 
-    log_message_key = pd.read_excel(path)
+    log_message_key = pd.read_csv(path)
 
     df_rm["LOG_MESSAGE"] = df_rm["LOG_MESSAGE"].str.lower()
 
