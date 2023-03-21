@@ -383,7 +383,7 @@ def run_tab1(df_rm):
         df_rm.groupby(["ITEM_DESCRIPTION", "ALIAS"], as_index=False)
         .agg({"LOT_NUMBER": "count", "QTY_KG": "sum"})
         .rename(columns={"LOT_NUMBER": "BAG_COUNT", "QTY_KG": "QUANTITY_KG"})
-        .sort_values("QUANTITY_KG")
+        .sort_values("QUANTITY_KG", ascending=False)
     )
 
     sns.set_context("paper")
@@ -391,7 +391,7 @@ def run_tab1(df_rm):
     fig = sns.catplot(
         data=df_rm_summary,
         x="ALIAS",
-        y="QUANTITY_KG",
+        y="BAG_COUNT",
         kind="bar",
     )
 
