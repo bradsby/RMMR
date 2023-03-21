@@ -386,6 +386,8 @@ def run_tab1(df_rm):
         .sort_values("QUANTITY_KG", ascending=False)
     )
 
+    st.dataframe(df_rm_summary)
+    
     sns.set_context("paper")
 
     fig = sns.catplot(
