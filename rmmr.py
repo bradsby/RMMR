@@ -392,7 +392,7 @@ def run_tab1(df_rm):
     fig = sns.catplot(
         data=df_rm_summary,
         x="ALIAS",
-        y="BAG_COUNT",
+        y="QUANTITY_KG",
         kind="bar",
     )
 
