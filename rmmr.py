@@ -16,6 +16,7 @@ from sklearn.cluster import KMeans
 
 st.set_page_config(
     page_title="RMMR",
+    page_icon='❓'
     layout="wide",
     initial_sidebar_state="expanded",
 )
