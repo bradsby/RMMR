@@ -14,6 +14,13 @@ from scipy.spatial import distance
 from sklearn.cluster import KMeans
 
 
+st.set_page_config(
+    page_title="RMMR",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+
 @st.cache_data
 def convert_df(df: pd.DataFrame):
     """
@@ -66,7 +73,7 @@ def find_headers(df):
     Returns
     -------
     color_labels : list(str)
-    psd_labels : list(str)  
+    psd_labels : list(str)
     color_headers : list(str)
     psd_headers : list(str)
 
@@ -273,7 +280,9 @@ def merge_tests_and_averages(df_rm, df_prof, df_blanks, labels, test):
         how="left",
     )
     df_merged[f"{test.upper()}_RESULT_SOURCE"] = "Calculated"
-    df_merged.loc[df_merged[labels[0]].notna(), f"{test.upper()}_RESULT_SOURCE"] = "Tested"
+    df_merged.loc[
+        df_merged[labels[0]].notna(), f"{test.upper()}_RESULT_SOURCE"
+    ] = "Tested"
     df_merged.update(df_blanks, overwrite=False)
 
     return df_merged
@@ -292,7 +301,7 @@ def set_inventory_dtypes(df):
     df : DataFrame
 
     """
-    
+
     df = df.fillna(0)
     df["PHYSICAL_FORMAT"] = df["PHYSICAL_FORMAT"].astype("category")
     df["ITEM_DESCRIPTION"] = df["ITEM_DESCRIPTION"].astype("category")
@@ -507,7 +516,6 @@ def run_tab3(df_final):
         max_dist_limit = st.number_input("Max Distance", value=0.5)
 
     if st.checkbox("Calculate", key=1):
-
         df_clusters = df_final[df_final["LOG_MESSAGE"].isin(log_message)].copy()
 
         final_labels = labels.copy()
@@ -536,7 +544,6 @@ def run_tab3(df_final):
         max_dist_from_centroid = 100
         if set_max_dist_limit:
             while max_dist_from_centroid > max_dist_limit:
-
                 clustering = KMeans(n_clusters=number_of_clusters, n_init="auto").fit(
                     test_df
                 )
@@ -762,7 +769,6 @@ def main():
 
     with tab1:
         if path1:
-
             df_rm = pd.read_csv(path1, thousands=",")
 
             df_rm = format_headers(df_rm)
