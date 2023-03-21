@@ -370,8 +370,6 @@ def run_tab1(df_rm):
 
     log_message_key = pd.read_csv(path)
 
-    df_rm["LOG_MESSAGE"] = df_rm["LOG_MESSAGE"].str.lower()
-
     df_rm = df_rm.merge(
         right=log_message_key,
         left_on="LOG_MESSAGE",
@@ -385,8 +383,6 @@ def run_tab1(df_rm):
         .rename(columns={"LOT_NUMBER": "BAG_COUNT", "QTY_KG": "QUANTITY_KG"})
         .sort_values("QUANTITY_KG", ascending=False)
     )
-
-    st.dataframe(df_rm)
 
     sns.set_context("paper")
 
