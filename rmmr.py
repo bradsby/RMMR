@@ -426,7 +426,7 @@ def run_tab1(df_rm):
         mime="image/png",
     )
 
-    return material
+    return material, df_rm
 
 
 def run_tab2(df_rm, df_prof):
@@ -771,7 +771,7 @@ def main():
 
             df_rm = format_headers(df_rm)
 
-            material = run_tab1(df_rm)
+            material, df_rm = run_tab1(df_rm)
 
         elif not path_3:
             st.warning("Upload RM Inventory data.")
