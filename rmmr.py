@@ -733,6 +733,7 @@ def run_tab4(df_clusters, parameters, material):
         fig.add_trace(go.Mesh3d(cube_data))
 
     fig.update_scenes(xaxis_autorange="reversed")
+    fig.update_layout(title_x=0.5)
 
     if st.checkbox("Calculate", key=2):
         st.plotly_chart(fig, theme="streamlit")
