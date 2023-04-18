@@ -43,7 +43,7 @@ Failed external color spec and internal microtrac,OOS Color & PSD
 Failed external color spec. Bag 1 failed external size distribution - 325 US Mesh. Failed internal microtrac spec,OOS Color & PSD
 Failed external color spec. Bag 1 failed internal microtrac spec,OOS Color & PSD
 Failed external PSD,OOS PSD
-Failed external PSD spec and internal color spec,OOS PSD
+Failed external PSD spec and internal color spec,OOS Color & PSD
 Failed external spec for color,OOS Color
 "Failed pH, needs feel mix, OOS Color",OOS Color & pH
 Failed PSD,OOS PSD
@@ -56,7 +56,7 @@ Foreign Material,Foreign Material
 "Foreign Material - Releases: RW3468, RW3469",Foreign Material
 Foreign Material Identified. Sorted - LS Raw 1/18/23,Foreign Material
 High B color,OOS Color
-"High Fines, OOS Color & PSD",OOS PSD
+"High Fines, OOS Color & PSD",OOS Color & PSD
 Hold for R&D samples and testing.,R&D
 Hopper return,Hopper Return
 "Hopper return, OOS Color",OOS Color
@@ -120,8 +120,8 @@ Only use in Sharpham or Skye.,Special Handle
 Only use in Sharpham.,Special Handle
 OOS Color,OOS Color
 OOS Color & Foreign Material,OOS Color & Foreign Material
-OOS Color & PSD,OOS PSD
-OOS Color and PSD,OOS PSD
+OOS Color & PSD,OOS Color & PSD
+OOS Color and PSD,OOS Color & PSD
 OOS Color- yellow particles,OOS Color
 "OOS Color, PSD passed on Sitec COA",OOS Color
 OOS Color-Hold for R&D samples and testing.,OOS Color
@@ -131,7 +131,7 @@ OOS Microtrac,OOS PSD
 OOS Microtrac - Scrap,OOS PSD
 OOS Microtrac & Color,OOS Color & PSD
 OOS PSD,OOS PSD
-OOS PSD & Color,OOS PSD
+OOS PSD & Color,OOS Color & PSD
 OOS PSD / Needs color testing,OOS PSD
 OOS REVIEW REQ'D before use - NPB 7/13/20 Failed external color spec,OOS Color
 OOS Sedigraph,OOS PSD
@@ -148,7 +148,7 @@ PO RECEIPT,Obsolete / Insurance
 PO Receipt,Obsolete / Insurance
 Poor Coverage,OOS Coverage
 Prism,R&D
-PSD- OOS & Color  - Failed external color spec,OOS PSD
+PSD- OOS & Color  - Failed external color spec,OOS Color & PSD
 R D PIGMENT,R&D
 REBAGGED,R&D
 Recipe needed to be updated,R&D
