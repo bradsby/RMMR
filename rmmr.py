@@ -499,7 +499,7 @@ def run_tab3(df_final):
 
     """
 
-    labels = ["LOT", "BAG", "LOCATION", "LOG_MESSAGE"]
+    labels = ["LOT", "BAG", "LOCATION", "LOCATOR", "LOG_MESSAGE"]
     material_type = st.selectbox("Material Type", ["Grit", "Powder"])
     test = st.selectbox("QA Test", ["Color", "PSD"])
     log_message = st.multiselect(
