@@ -816,13 +816,7 @@ def main():
     with tab4:
         if path1 and path_3:
             try:
-                if df_clusters:
-                    test = st.selectbox("QA Test", ["Color", "PSD"])
-                    parameters = find_parameters(df_clusters, test)
-                    run_tab4(df_clusters, parameters, material)
-                else:
-                    parameters = find_parameters(df_final)
-                    run_tab4(df_final, parameters, material)
+                run_tab4(df_clusters, parameters, material)
 
             except Exception as e:
                 st.error(e)
