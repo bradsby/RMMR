@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 
 st.set_page_config(
     page_title="RMMR",
-    page_icon='❓',
+    page_icon="❓",
     initial_sidebar_state="expanded",
 )
 
@@ -639,7 +639,7 @@ def run_tab3(df_final):
     return df_clusters, parameters
 
 
-def run_tab4(df_clusters, parameters, material):
+def run_tab4(df, parameters, material):
     """
     Run tab to make 3D plot of clusters.
 
@@ -660,7 +660,7 @@ def run_tab4(df_clusters, parameters, material):
     z = st.selectbox("Z", parameters, index=2)
 
     fig = px.scatter_3d(
-        data_frame=df_clusters,
+        data_frame=df,
         x=x,
         y=y,
         z=z,
@@ -815,7 +815,10 @@ def main():
     with tab4:
         if path1 and path_3:
             try:
-                run_tab4(df_clusters, parameters, material)
+                if df_clusters:
+                    run_tab4(df_clusters, parameters, material)
+                else:
+                    run_tab4(df_final, parameters, material)
 
             except Exception as e:
                 st.error(e)
