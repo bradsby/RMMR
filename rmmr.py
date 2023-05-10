@@ -817,8 +817,10 @@ def main():
         if path1 and path_3:
             try:
                 if df_clusters:
+                    parameters = find_parameters(df_clusters)
                     run_tab4(df_clusters, parameters, material)
                 else:
+                    parameters = find_parameters(df_final)
                     run_tab4(df_final, parameters, material)
 
             except Exception as e:
