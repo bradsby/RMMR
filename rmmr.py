@@ -796,6 +796,7 @@ def main():
             st.warning("Upload Proficient data.")
 
     with tab3:
+        df_clusters = None
         if path1 and path_3:
             try:
                 df_clusters, parameters = run_tab3(df_final)
@@ -815,10 +816,10 @@ def main():
     with tab4:
         if path1 and path_3:
             try:
-                if not df_clusters:
-                    run_tab4(df_final, parameters, material)
-                else:
+                if df_clusters:
                     run_tab4(df_clusters, parameters, material)
+                else:
+                    run_tab4(df_final, parameters, material)
 
             except Exception as e:
                 st.error(e)
