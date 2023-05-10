@@ -818,7 +818,7 @@ def main():
             try:
                 if df_clusters:
                     test = st.selectbox("QA Test", ["Color", "PSD"])
-                    parameters = find_parameters(df_clusters)
+                    parameters = find_parameters(df_clusters, test)
                     run_tab4(df_clusters, parameters, material)
                 else:
                     parameters = find_parameters(df_final)
