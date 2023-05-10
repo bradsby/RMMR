@@ -815,10 +815,10 @@ def main():
     with tab4:
         if path1 and path_3:
             try:
-                if df_clusters:
-                    run_tab4(df_clusters, parameters, material)
-                else:
+                if not df_clusters:
                     run_tab4(df_final, parameters, material)
+                else:
+                    run_tab4(df_clusters, parameters, material)
 
             except Exception as e:
                 st.error(e)
