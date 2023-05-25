@@ -18,6 +18,7 @@ Clumps - Duluth inspection,Moisture
 Clumps - Inspected in Duluth,Moisture
 Clumps Inspected in Duluth,Moisture
 Clumps Inspected in Duluth.,Moisture
+Color,OOS Color
 COLOR   Approved R&D 4-3-21,OOS Color
 COLOR  Aproved per R&D 4-23-21,OOS Color
 COLOR  Aproved R&D 4-23-21,OOS Color
@@ -122,6 +123,7 @@ OOS Color,OOS Color
 OOS Color & Foreign Material,OOS Color & Foreign Material
 OOS Color & PSD,OOS Color & PSD
 OOS Color and PSD,OOS Color & PSD
+OOS Color on COA,OOS Color
 OOS Color- yellow particles,OOS Color
 "OOS Color, PSD passed on Sitec COA",OOS Color
 OOS Color-Hold for R&D samples and testing.,OOS Color
@@ -148,6 +150,7 @@ PO RECEIPT,Obsolete / Insurance
 PO Receipt,Obsolete / Insurance
 Poor Coverage,OOS Coverage
 Prism,R&D
+PSD,OOS PSD
 PSD- OOS & Color  - Failed external color spec,OOS Color & PSD
 R D PIGMENT,R&D
 REBAGGED,R&D
@@ -456,4 +459,3 @@ Wood splinters,Foreign Material
 WRONG MATERIAL ACRO 325 inside Acro1-4 foriegn Material also found inside bag!,Incorrect Material
 "Wrong material, looks like CB 3-7.",Incorrect Material
 "yellow, green, blue starbursts, Ok'd per R&D",R&D
-OOS Color on COA,OOS Color
